@@ -11,7 +11,7 @@ const products = [
   {
     title: "Awesome Product 1",
     price: 29.99,
-    image: "https://via.placeholder.com/300?text=Product+1", // Placeholder image
+    image: "https://www.bing.com/th?id=OPAC.tdRnekRq63uJAw474C474&o=5&pid=21.1&w=160&h=240&rs=1&qlt=100&dpr=1.3&c=8&pcl=f5f5f5", // Placeholder image
     rating: 4.5,
     reviewCount: 50,
     inStock: true,
@@ -41,7 +41,15 @@ const products = [
     inStock: true,
   },
   {
-    title: "Awesome Product 4",
+    title: "Awesome Product 5",
+    price: 99.99,
+    image: "https://via.placeholder.com/300?text=Product+4", // Placeholder image
+    rating: 5.0,
+    reviewCount: 120,
+    inStock: true,
+  },
+  {
+    title: "Awesome Product 6",
     price: 99.99,
     image: "https://via.placeholder.com/300?text=Product+4", // Placeholder image
     rating: 5.0,
@@ -50,10 +58,12 @@ const products = [
   },
   // Add more products as needed
 ];
-  
+
+// Add more products as needed
+
 
   return (
-    <div>
+    <div className="p-2">
     <Navbar />
     <div className="flex justify-center items-center min-h-screen bg-gray-100">
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-5">
