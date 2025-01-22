@@ -10,7 +10,7 @@ import { Star, ShoppingCart } from "lucide-react";
       <CardHeader className="p-0">
         <div className="relative h-[200px] overflow-hidden">
           <img
-            src={image || "/placeholder.svg"}
+            src={image || "/favicon-32x32.png"}
             alt={title}
             className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
           />
@@ -37,8 +37,8 @@ import { Star, ShoppingCart } from "lucide-react";
         </div>
       </CardContent>
       <CardFooter className="p-4 pt-0">
-        <Button className="w-full">
-          <ShoppingCart className="mr-2 h-4 w-4" /> Add to Cart
+        <Button className="w-full bg-red-950">
+          <ShoppingCart className="mr-2 h-4 w-4 " /> Add to Cart
         </Button>
       </CardFooter>
     </Card>
