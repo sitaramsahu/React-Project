@@ -11,8 +11,8 @@ export default function Navbar() {
           <div className="flex justify-between h-16">
             <div className="flex items-center">
               <a href="/" className="flex-shrink-0 flex">
-              <img src="/asrs_shop.jpg" alt="ASRS Shop" className="h-10 w-15" />
-                {/* <span className="text-2xl font-bold text-primary">ASRS Shop</span> */}
+              {/* <img src="/favicon.ico" alt="My Shop" className="h-10 w-15" /> */}
+                <span className="text-2xl font-bold text-primary">My Shop</span>
               </a>
               <div className="hidden sm:ml-6 sm:flex sm:space-x-8">
                 <a

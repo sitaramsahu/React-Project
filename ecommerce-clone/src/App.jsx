@@ -4,6 +4,7 @@ import React from "react";
 import ProductCard from "@/components/ProductCard"; // Default import
 import Navbar from "./components/Navbar";
 import Footer from "./components/Footer";
+import Slide from "./components/Slide";
 
 function App() {
   
@@ -65,6 +66,7 @@ const products = [
   return (
     <div className="p-2">
     <Navbar />
+    <Slide />
     <div className="flex justify-center items-center min-h-screen bg-gray-100">
     <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-5">
           {products.map((product, index) => (
