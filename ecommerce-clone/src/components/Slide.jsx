@@ -29,7 +29,7 @@ const Slide = () => {
                 "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhJ9OvLPYDsw7eruW4RfQr9sv_GlcwMFkrUmSUzAGTT9rgQoe8BgAaTPIBgZ0c94OnpKfIkverrDSX-WjsdAjGFMxJcofUEUrrAjyr4WDkFdiBfLjaJbYXVBImX50NMwxJxn6Cdm16PxwvP88iMRzlaDyCxNAPgT_PNVVLpGL-SBi-U3hY-LPNN1ljziDPJ/w640-h640/2025_quotes_%20(1).jpg",
                 "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEg69ju70_D2NaoVclHUY9evxGBHPhbyS-mRGxlVmsVtJDwRsLfgQDL-FMK7fxfiO4Bf8FqCu2C_UAOC5mBnXW4X4EVneY6utSmuYUbwbRZ1DvoMh32PCt3ZHG2PATemFOcJxYp7qPn5I_l5mnENijY6m292NYL1k3voG6jaQ7_hxbFWQgX9g4dpwqbY0CS3/w640-h640/2025_quotes_%20(3).jpg",
       ].map((image, index) => (
-        <CarouselItem key={index} className="basis-1/5">
+        <CarouselItem key={index} className="basis-1/4">
           <div className="p-2">
             <Card>
               <CardContent className="flex aspect-square items-center justify-center p-6">

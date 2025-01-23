@@ -1,5 +1,5 @@
 import React from "react"
-import { Facebook, Twitter, Instagram } from "lucide-react"
+import { Facebook, Twitter, Instagram, Linkedin, Youtube } from "lucide-react"
 import { Input } from "@/components/ui/input"
 import { Button } from "@/components/ui/button"
 
@@ -38,18 +38,15 @@ export default function Footer() {
                   About
                 </a>
               </li>
-              <li>
-                <a href="#" className="text-sm text-gray-800 hover:text-primary">
-                  Contact
-                </a>
-              </li>
             </ul>
           </div>
           <div>
             <h3 className="text-lg font-semibold mb-4">Contact Us</h3>
-            <p className="text-sm text-gray-800">123 Shop Street, City, Country</p>
-            <p className="text-sm text-gray-800">Email: info@shopnow.com</p>
-            <p className="text-sm text-gray-800">Phone: +1 234 567 890</p>
+            <p className="text-sm text-gray-800">A/111, Rajnagar, Madhubani</p>
+            <p className="text-sm text-gray-800">Bihar, India</p>
+            <p className="text-sm text-gray-800">PIN: 101011</p>
+            <p className="text-sm text-gray-800">Email: info@asrsnews.in</p>
+            <p className="text-sm text-gray-800">Phone: +91 987 654 123</p>
           </div>
           <div>
             <h3 className="text-lg font-semibold mb-4">Newsletter</h3>
@@ -59,20 +56,26 @@ export default function Footer() {
               <Button className="rounded-l-none">Subscribe</Button>
             </div>
             <div className="mt-4 flex space-x-4">
-              <a href="#" className="text-gray-400 hover:text-primary">
+              <a href="https://fb.openinapp.link/sahu" className="text-gray-400 hover:text-primary">
                 <Facebook size={20} />
               </a>
-              <a href="#" className="text-gray-400 hover:text-primary">
+              <a href="https://twtr.openinapp.link/sahu" className="text-gray-400 hover:text-primary">
                 <Twitter size={20} />
               </a>
-              <a href="#" className="text-gray-400 hover:text-primary">
+              <a href="https://insta.openinapp.link/News-Account" className="text-gray-400 hover:text-primary">
                 <Instagram size={20} />
+              </a>
+              <a href="https://ln.oia.bio/sahu" className="text-gray-400 hover:text-primary" >
+                <Linkedin size={20} />
+              </a>
+              <a href="https://yt.openinapp.link/News-Channel" className="text-gray-400 hover:text-primary" >
+                <Youtube size={20} />
               </a>
             </div>
           </div>
         </div>
         <div className="mt-8 border-t border-gray-200 pt-8 text-center">
-          <p className="text-sm text-gray-800">&copy; 2023 ShopNow. All rights reserved.</p>
+          <p className="text-sm text-gray-800">Copyright &copy; <b>2025</b> MyShop. All rights reserved.</p>
         </div>
       </div>
     </footer>

@@ -3,8 +3,21 @@ import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card"
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Star, ShoppingCart } from "lucide-react";
+import { toast } from "sonner"
+
 
  function ProductCard({ title, price, image, rating, reviewCount, inStock }) {
+  function cardHandler() {
+      // console.log(`${title} added to cart`);
+      toast.success(`${title} added to cart`, {
+        
+        description: "Go to Card and Checkout",
+        action: {
+          label: "Undo",
+          onClick: () => console.log("Undo"),
+        },
+      })
+  }
   return (
     <Card className="w-[300px] overflow-hidden">
       <CardHeader className="p-0">
@@ -37,11 +50,13 @@ import { Star, ShoppingCart } from "lucide-react";
         </div>
       </CardContent>
       <CardFooter className="p-4 pt-0">
-        <Button className="w-full bg-red-950">
-          <ShoppingCart className="mr-2 h-4 w-4 " /> Add to Cart
+        <Button className="w-full bg-red-950" onClick={cardHandler}>
+          <ShoppingCart className="mr-2 h-4 w-4 " /> Add to Cart 
+        
         </Button>
       </CardFooter>
     </Card>
+ 
   );
 }
 

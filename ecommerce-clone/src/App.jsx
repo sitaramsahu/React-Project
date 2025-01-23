@@ -73,6 +73,14 @@ const products = [
     reviewCount: 120,
     inStock: true,
   },
+  {
+    title: "Awesome Product 5",
+    price: 349.99,
+    image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh9NTAx6zCmdpgG8rPrRM-OmatXlS3abYuZWMd3djAUcHAn_O5tmO6jXa_3xPybboe-N1NNgxwoDU7E2Sw6bcv-_MYLyr9nsfkdLZ5EXWuM6dcb1GFkJWjgKSwwPhuibqbwSBlgZaCCphmt5A6qir-02NJ9kupiuuUolyFPSUOG20fAyWAC0QbXJt7O3uLk/w166-h200/img%20(7).jpeg", // Placeholder image
+    rating: 5.0,
+    reviewCount: 120,
+    inStock: true,
+  },
 ];
 
 
@@ -83,7 +91,7 @@ const products = [
     <Navbar />
     <Slide />
     <div className="flex justify-center items-center min-h-screen bg-gray-100">
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-6 p-5">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-5">
           {products.map((product, index) => (
             <ProductCard key={index} {...product} />
           ))}
