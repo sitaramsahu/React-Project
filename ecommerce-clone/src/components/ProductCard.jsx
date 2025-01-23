@@ -24,7 +24,7 @@ import { Star, ShoppingCart } from "lucide-react";
       <CardContent className="p-4">
         <h3 className="font-semibold text-lg mb-2 truncate">{title}</h3>
         <div className="flex items-center justify-between">
-          <span className="text-2xl font-bold">${price.toFixed(2)}</span>
+          <span className="text-2xl font-bold">₹{price.toFixed(2)}</span>
           <div className="flex items-center">
             {[...Array(5)].map((_, i) => (
               <Star
