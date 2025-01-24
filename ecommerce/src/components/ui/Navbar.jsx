@@ -1,4 +1,5 @@
 import { useState, useEffect } from "react";
+import { Facebook, Instagram, Linkedin, Twitter, Youtube } from 'lucide-react'
 import { Search, User, ShoppingCart, ChevronDown, Link } from "lucide-react";
 import { Input } from "@/components/ui/input";
 import { DropdownMenu, DropdownMenuContent, DropdownMenuItem, DropdownMenuTrigger } from "@/components/ui/dropdown-menu";
@@ -24,8 +25,19 @@ const Navbar = () => {
   }, []);
 
   return (
+    <>
+        <div>
+    <ul className='flex space-x-8 justify-center p-3 bg-slate-200'>
+        <li><Instagram /> </li>
+        <li><Facebook /> </li>
+        <li><Twitter /> </li>
+        <li><Linkedin /></li>
+        <li><Youtube /></li>
+        <p className='font-semibold'>India's Largest : Stationery I Art & Craft Store | <a href="#">Explore Now</a></p>
+    </ul>
+</div>
     <nav
-      className={`fixed top-0 left-0 right-0 z-50 bg-white shadow-md transition-all duration-300 ${
+      className={`sticky top-0 left-0 right-0 z-50 bg-white shadow-md transition-all duration-300 ${
         isScrolled ? "py-0" : "top-24"
       }`}
     >
@@ -40,7 +52,7 @@ const Navbar = () => {
           </div>
 
           {/* Dropdown */}
-          <div className="hidden md:block">
+          <div className=" md:block">
             <DropdownMenu>
               <DropdownMenuTrigger className="inline-flex items-center px-3 py-2 border border-transparent text-sm leading-4 font-medium rounded-md text-gray-500 bg-white hover:text-gray-700 focus:outline-none transition">
                 Menu
@@ -97,6 +109,7 @@ const Navbar = () => {
         </div>
       </div>
     </nav>
+    </>
   );
 };
 

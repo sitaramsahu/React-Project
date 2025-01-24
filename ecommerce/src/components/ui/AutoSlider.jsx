@@ -1,4 +1,3 @@
-import { Facebook, Instagram, Linkedin, Twitter, Youtube } from 'lucide-react'
 import React from 'react'
 
 const AutoSlider = () => {
@@ -11,18 +10,6 @@ const AutoSlider = () => {
           <li>☃️ Win 2 Free Gifts on All Orders Above ₹1499! 🎁</li>
         </ul>
         </div>
-
-        <div>
-            <ul className='flex space-x-8 justify-center p-3 bg-slate-200'>
-                <li><Instagram /> </li>
-                <li><Facebook /> </li>
-                <li><Twitter /> </li>
-                <li><Linkedin /></li>
-                <li><Youtube /></li>
-                <p className='font-semibold'>India's Largest : Stationery I Art & Craft Store | <a href="#">Explore Now</a></p>
-            </ul>
-        </div>
-
     </div>
   )
 }
