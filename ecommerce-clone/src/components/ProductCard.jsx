@@ -19,7 +19,7 @@ import { toast } from "sonner"
       })
   }
   return (
-    <Card className="w-[300px] overflow-hidden">
+    <Card className="w-[280px] h-[200] overflow-hidden">
       <CardHeader className="p-0">
         <div className="relative h-[200px] overflow-hidden">
           <img

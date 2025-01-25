@@ -58,23 +58,16 @@ const products = [
     inStock: true,
   },
   {
-    title: "Awesome Product 1",
+    title: "Awesome Product 7",
     price: 999.99,
     image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEj81wjz4CZdH4rjgv77uOMPXR3R5JVp7yhdZ016uhsmfUdx_cpLM-x4CEORYP-LFpHLVengXVbGBZWKzafptxcEMOrVQV7aq044zGg4kSQDtOX4UwxgFA4FF7r13hmCgMq46zd3CtKYm4Exef-MuZg9kCnIBUTYeIx1T3SAjYqyeYh5t-U5ZPuuXEdeZjyW/w150-h200/img%20(9).jpeg", // Placeholder image
     rating: 4.5,
     reviewCount: 50,
     inStock: true,
   },
+
   {
-    title: "Awesome Product 4",
-    price: 789.99,
-    image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEhWbk25UJV_bLsBMb4eQaFrj1LO9eKopWCT9t-jcEctIVEMmFkYa4hXQpUw4dw3FXwVWCR9OUWJQhxsQu-HaLLabMVeTfLW5XXFDfwnCASf5-z1EePZ1XSb4aXOPBVJrwYlQZgdeABRhSDgGJJUbFQ9zs4TARh01NNrIvVEJ-80sco4Palo5Mq5WVDCr6sk/w150-h200/img%20(3).jpeg", // Placeholder image
-    rating: 5.0,
-    reviewCount: 120,
-    inStock: true,
-  },
-  {
-    title: "Awesome Product 5",
+    title: "Awesome Product 8",
     price: 349.99,
     image: "https://blogger.googleusercontent.com/img/b/R29vZ2xl/AVvXsEh9NTAx6zCmdpgG8rPrRM-OmatXlS3abYuZWMd3djAUcHAn_O5tmO6jXa_3xPybboe-N1NNgxwoDU7E2Sw6bcv-_MYLyr9nsfkdLZ5EXWuM6dcb1GFkJWjgKSwwPhuibqbwSBlgZaCCphmt5A6qir-02NJ9kupiuuUolyFPSUOG20fAyWAC0QbXJt7O3uLk/w166-h200/img%20(7).jpeg", // Placeholder image
     rating: 5.0,
@@ -91,7 +84,7 @@ const products = [
     <Navbar />
     <Slide />
     <div className="flex justify-center items-center min-h-screen bg-gray-100">
-    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-6 p-5">
+    <div className="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-4 gap-8 p-5">
           {products.map((product, index) => (
             <ProductCard key={index} {...product} />
           ))}
