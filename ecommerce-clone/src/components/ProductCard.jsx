@@ -1,22 +1,33 @@
 import React from "react";
-import { Card, CardContent, CardFooter, CardHeader } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardFooter,
+  CardHeader,
+} from "@/components/ui/card";
 import { Badge } from "@/components/ui/badge";
 import { Button } from "@/components/ui/button";
 import { Star, ShoppingCart } from "lucide-react";
-import { toast } from "sonner"
+import { toast } from "sonner";
 
-
- function ProductCard({ title, price, image, rating, reviewCount, inStock }) {
+function ProductCard({
+  title,
+  price,
+  image,
+  rating,
+  reviewCount,
+  inStock,
+  outOfStock,
+}) {
   function cardHandler() {
-      // console.log(`${title} added to cart`);
-      toast.success(`${title} added to cart`, {
-        
-        description: "Go to Card and Checkout",
-        action: {
-          label: "Undo",
-          onClick: () => console.log("Undo"),
-        },
-      })
+    // console.log(`${title} added to cart`);
+    toast.success(`${title} added to cart`, {
+      description: "Go to Card and Checkout",
+      action: {
+        label: "Undo",
+        onClick: () => console.log("Undo"),
+      },
+    });
   }
   return (
     <Card className="w-[280px] h-[200] overflow-hidden">
@@ -28,9 +39,15 @@ import { toast } from "sonner"
             className="w-full h-full object-cover transition-transform duration-300 hover:scale-110"
           />
           {inStock ? (
-            <Badge className="absolute top-2 right-2 bg-green-500">In Stock</Badge>
+            <Badge className="absolute top-2 right-2 bg-green-500">
+              In Stock
+            </Badge>
+          ) : outOfStock ? (
+            <Badge className="absolute top-2 right-2 bg-red-500">
+              Out of Stock
+            </Badge>
           ) : (
-            <Badge className="absolute top-2 right-2 bg-red-500">Out of Stock</Badge>
+            <Badge className="absolute top-2 right-2 bg-transparent"><img src="/new-gif.gif" alt="New Stock" /></Badge>
           )}
         </div>
       </CardHeader>
@@ -42,7 +59,11 @@ import { toast } from "sonner"
             {[...Array(5)].map((_, i) => (
               <Star
                 key={i}
-                className={`w-4 h-4 ${i < Math.floor(rating) ? "text-yellow-400 fill-yellow-400" : "text-gray-300"}`}
+                className={`w-4 h-4 ${
+                  i < Math.floor(rating)
+                    ? "text-yellow-400 fill-yellow-400"
+                    : "text-gray-300"
+                }`}
               />
             ))}
             <span className="ml-2 text-sm text-gray-600">({reviewCount})</span>
@@ -51,13 +72,11 @@ import { toast } from "sonner"
       </CardContent>
       <CardFooter className="p-4 pt-0">
         <Button className="w-full bg-red-950" onClick={cardHandler}>
-          <ShoppingCart className="mr-2 h-4 w-4 " /> Add to Cart 
-        
+          <ShoppingCart className="mr-2 h-4 w-4 " /> Add to Cart
         </Button>
       </CardFooter>
     </Card>
- 
   );
 }
 
-export default ProductCard
+export default ProductCard;
