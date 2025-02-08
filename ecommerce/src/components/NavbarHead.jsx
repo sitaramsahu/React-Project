@@ -31,7 +31,7 @@ const NavbarHead = () => {
                   stroke-width="3"
                   stroke-linecap="round"
                   stroke-linejoin="round"
-                  class="lucide lucide-circle-user"
+                  className="lucide lucide-circle-user"
                 >
                   <circle cx="12" cy="12" r="10" />
                   <circle cx="12" cy="10" r="3" />
