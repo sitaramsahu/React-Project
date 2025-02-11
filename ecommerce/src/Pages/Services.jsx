@@ -29,32 +29,28 @@ const Services = () => {
       <h1 className="text-center font-bold text-5xl">ASRS Subscribe Button</h1>{" "}
       <br />
       <div>
-        <div className="relative w-72 p-4 bg-transparent rounded-lg justify-center justify-items-center m-">
-          {/* Gradient Background */}
-          <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 opacity-30 rounded-lg"></div>
-
-          {/* Subscribe Button */}
-          <button
-            className="relative w- flex items-center justify-between bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition"
-            aria-label="Subscribe Now"
-          >
-            {/* Provider Info */}
-            <div className="flex items-center gap-3">
-              <img
-                className="w-6 h-6 rounded-full"
-                src="https://asrsnews.in/wp-content/uploads/2024/12/android-chrome-192x192-1.png"
-                alt="ASRS News"
-                width={40}
-                height={40}
-              />
-              <span className="text-gray-800 font-medium">ASRS News</span>
-            </div>
-
-            {/* Subscribe Button */}
-            <span className="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-blue-700 transition">
-              Subscribe Now
-            </span>
-          </button>
+        <div className="flex items-center justify-center ">
+          <div className="relative w-72 p-4 bg-transparent rounded-lg">
+            <div className="absolute inset-0 bg-gradient-to-r from-blue-500 to-purple-500 opacity-30 rounded-lg"></div>
+            <button
+              className="relative w-full flex items-center justify-between bg-white p-4 rounded-lg shadow-md hover:shadow-lg transition"
+              aria-label="Subscribe Now"
+            >
+              <div className="flex items-center gap-3">
+                <img
+                  className="w-6 h-6 rounded-full"
+                  src="https://asrsnews.in/wp-content/uploads/2024/12/android-chrome-192x192-1.png"
+                  alt="ASRS News"
+                  width={40}
+                  height={40}
+                />
+                <span className="text-gray-800 font-medium">ASRS News</span>
+              </div>
+              <span className="bg-blue-600 text-white px-4 py-2 rounded-lg text-sm font-semibold hover:bg-blue-700 transition">
+                Subscribe Now
+              </span>
+            </button>
+          </div>
         </div>
 
         {/* 
