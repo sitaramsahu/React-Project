@@ -1,43 +1,39 @@
-import { useEffect, useState } from "react";
+import { Button } from "@/components/ui/button";
+import React from "react";
 
 const Services = () => {
-  const images = [
-    "https://talkpal.ai/wp-content/uploads/2024/09/asseenonlogo6-1.jpg.webp",
-    "https://talkpal.ai/wp-content/uploads/2024/09/asseenonlogo7-1.jpg.webp",
-    "https://talkpal.ai/wp-content/uploads/2024/09/asseenonlogo5-1.jpg.webp",
-    "https://talkpal.ai/wp-content/uploads/2024/09/asseenonlogo7-1.jpg.webp",
-    "https://talkpal.ai/wp-content/uploads/2024/09/asseenonlogo5-1.jpg.webp",
-  ];
-
-  const [slideIndex, setSlideIndex] = useState(0);
-
-  useEffect(() => {
-    const interval = setInterval(() => {
-      setSlideIndex((prevIndex) => (prevIndex + 1) % images.length);
-    }, 2000);
-
-    return () => clearInterval(interval);
-  }, []);
-
   return (
-    <>
+    <div>
+      <h1 className="text-center font-bold text-5xl">ASRS Subscribe Button</h1>{" "}
+      <br />
       <div>
-        {/* <h1 className="font-bold bg-black text-yellow-300 text-center text-lg"> Testing </h1> */}
+        <div className="relative w-full overflow-hidden bg-gradient-to-r from-black to-purple-900 px-4 py-6">
+          <div className="mx-auto flex max-w-6xl items-center justify-between">
+            <div className="space-y-2">
+              <div className="flex items-center gap-2">
+                <img
+                  src="https://asrsnews.in/wp-content/uploads/2024/12/android-chrome-192x192-1.png"
+                  alt="ASRS News"
+                  width={40}
+                  height={40}
+                  className="h-10 w-10"
+                />
+                <span className="text-xl font-semibold text-white">
+                  ASRS News
+                </span>
+              </div>
+              <h2 className="text-2xl font-bold text-white">HT Premium</h2>
+              <p className="text-lg text-gray-300">
+                Subscribe Now & Dive Deeper with ASRS News
+              </p>
+            </div>
+            <Button className="bg-white text-black hover:bg-gray-100" size="lg">
+              Subscribe Now
+            </Button>
+          </div>
+        </div>
       </div>
-
-      <div className="relative max-w-full mx-auto overflow-hidden">
-        {images.map((image, index) => (
-          <img
-            key={index}
-            src={image}
-            className={`w-full absolute transition-opacity duration-1000 ${
-              index === slideIndex ? "opacity-100" : "opacity-0"
-            }`}
-            alt={`Slide ${index + 1}`}
-          />
-        ))}
-      </div>
-    </>
+    </div>
   );
 };
 
