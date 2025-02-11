@@ -26,14 +26,7 @@ const Home = () => {
   return (
     <div className="w-full">
       <h1 className="text-2xl font-bold text-center">Home Page</h1>
-      {/* <div className="p-5 ">
-        <div className="w-full justify-center">
-          <img
-            src="https://sitaramstationers.shiprocket.co/post_order/img/order_search_banner_1.png"
-            alt="Spipment"
-          />
-        </div>
-      </div> */}
+      <div></div>
       <div>
         <div className="relative w-full bg-transparent py-0 m-0">
           <div className="overflow-hidden">
