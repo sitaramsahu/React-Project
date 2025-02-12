@@ -1,5 +1,5 @@
-import DeleteCom from "@/components/DeleteCom";
 import React from "react";
+import bgImage from "../assets/stationery-hero.jpg";
 
 const About = () => {
   return (
@@ -13,17 +13,18 @@ const About = () => {
 
       <div className="bg-gray-100 min-h-screen">
         {/* Hero Section */}
-        {/* <section
+
+        <section
           className="relative w-full h-96 bg-cover bg-center"
-          style={{ backgroundImage: "url('/assets/stationery-hero.jpg')" }}
+          style={{ backgroundImage: `url(${bgImage})` }}
         >
           <div className="absolute inset-0 bg-black bg-opacity-50 flex items-center justify-center">
             <h1 className="text-white text-5xl font-bold">About Us</h1>
           </div>
-        </section> */}
+        </section>
 
         {/* About Story */}
-        <section className="container mx-auto px-6 py-12 text-center">
+        {/* <section className="container mx-auto px-6 py-12 text-center">
           <h2 className="text-4xl font-bold text-gray-800">Our Story</h2>
           <p className="mt-4 text-gray-600 leading-relaxed">
             At <span className="text-blue-500 font-semibold">YourStore</span>,
@@ -33,7 +34,7 @@ const About = () => {
             inception, we have grown into a trusted brand, serving thousands of
             happy customers.
           </p>
-        </section>
+        </section> */}
 
         {/* Mission & Values */}
         <section className="container mx-auto px-6 py-12 bg-white shadow-md rounded-lg">
