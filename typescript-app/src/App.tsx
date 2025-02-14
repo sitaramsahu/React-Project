@@ -1,12 +1,14 @@
+import { Sidebar } from "./components/Sidebar/app-sidebar";
 import "./App.css";
-import AppRoutes from "./components/Routes/AppRoutes";
 import { ThemeProvider } from "./components/theme/theme-provider";
+import Dashboard from "./pages/Dashboard/Dashboard";
 
 function App() {
   return (
     <>
       <ThemeProvider defaultTheme="light" storageKey="vite-ui-theme">
-        <AppRoutes />
+        <Sidebar />
+        <Dashboard />
       </ThemeProvider>
     </>
   );
