@@ -8,6 +8,7 @@ import {
   Bell,
   User,
 } from "lucide-react";
+import { ReactNode } from "react";
 import {
   Sidebar,
   SidebarContent,
@@ -21,8 +22,11 @@ import {
 } from "@/components/ui/sidebar";
 import { Input } from "@/components/ui/input";
 import { Button } from "@/components/ui/button";
+interface LayoutProps {
+  children: ReactNode;
+}
 
-const Layout = ({ children }) => {
+const Layout: React.FC<LayoutProps> = ({ children }) => {
   return (
     <SidebarProvider>
       <div className="flex  bg-gray-100">
@@ -71,7 +75,7 @@ const Layout = ({ children }) => {
         </Sidebar>
         <div className="flex-1 flex flex-col overflow-hidden">
           {/* Sticky Navbar */}
-          <header className="bg-white shadow-sm sticky top-0 z-10">
+          <header className="bg-white shadow-sm sticky top-0 z-50">
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
               <div className="flex items-center">
                 <SidebarTrigger className="mr-4 " />
