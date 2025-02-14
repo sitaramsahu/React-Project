@@ -49,11 +49,6 @@ const Dashboard: React.FC = () => {
     <div className="p-6">
       {/* ✅ Page Header */}
       <div className="text-black text-base sm:text-3xl md:text-4xl lg:text-5xl xl:text-6xl font-bold mb-8 text-center">
-        <h1>My TypeScript Page</h1>
-      </div>
-
-      {/* ✅ Product Section */}
-      <div className="text-center mb-6">
         <h3 className="text-blue-950 text-base sm:text-2xl font-bold">
           Product Of The Day
         </h3>
@@ -62,7 +57,10 @@ const Dashboard: React.FC = () => {
           updated daily!
         </p>
       </div>
-      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-3 gap-2">
+
+      {/* ✅ Product Section */}
+
+      <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2">
         {products.map((product, index) => (
           <ProductCard
             key={index}

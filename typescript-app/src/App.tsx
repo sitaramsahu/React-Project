@@ -1,18 +1,19 @@
 import Dashboard from "./pages/Dashboard/Dashboard";
-import Header from "./components/Header/Header";
-import Sidebar from "./components/Sidebar/Sidebar"; // Assuming Sidebar is in the components folder
+// import Header from "./components/Header/Header";
+import Layout from "./components/Sidebar/Layout";
 
 const App = () => {
   return (
-    <div className="flex ">
-      <Sidebar />
-
-      <main className="flex-1 flex flex-col">
-        <Header />
-
-        <Dashboard />
-      </main>
-    </div>
+    <>
+      {/* <Header /> */}
+      <div className="w-full ">
+        <Layout>
+          <div className="bg-white shadow-sm rounded-lg p-5 w-full">
+            <Dashboard />
+          </div>
+        </Layout>
+      </div>
+    </>
   );
 };
 

@@ -32,9 +32,9 @@ const ProductCard: React.FC<ProductCardProps> = ({
     return stars;
   };
   return (
-    <div className="bg-white rounded-xl shadow-md overflow-hidden w-80 border border-gray-200">
+    <div className="bg-white rounded-xl shadow-md overflow-hidden w-60  border border-gray-200">
       {/* Product Image */}
-      <img src={image} alt={title} className="w-full h-48 object-cover" />
+      <img src={image} alt={title} className="w-32 h-32 object-cover" />
 
       {/* Product Details */}
       <div className="p-4">
