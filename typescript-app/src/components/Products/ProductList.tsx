@@ -1,5 +1,5 @@
-import ProductCard from "@/components/Products/ProductCard";
 import React from "react";
+import ProductCard from "./ProductCard";
 
 const products = [
   {
@@ -44,7 +44,7 @@ const products = [
   },
 ];
 
-const Dashboard: React.FC = () => {
+const ProductList: React.FC = () => {
   return (
     <div className="p-6">
       {/* ✅ Page Header */}
@@ -75,4 +75,5 @@ const Dashboard: React.FC = () => {
     </div>
   );
 };
-export default Dashboard;
+
+export default ProductList;
