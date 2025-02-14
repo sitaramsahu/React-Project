@@ -1,15 +1,17 @@
-import { Separator } from "@/components/ui/separator";
-import { SidebarTrigger } from "@/components/ui/sidebar";
-
 const Header = () => {
   return (
-    <header className="flex h-16 shrink-0 items-center gap-2 transition-[width,height] ease-linear group-has-[[data-collapsible=icon]]/sidebar-wrapper:h-12">
-      <div className="flex w-full items-center gap-2 px-4">
-        <SidebarTrigger className="-ml-1" />
-        <Separator orientation="vertical" className="mr-2 h-4" />
-        <div className="flex items-center justify-between w-full"></div>
-      </div>
-    </header>
+    <div>
+      <header className="bg-gray-800 text-white py-4">
+        <div className="container mx-auto text-center px-4">
+          <h1 className="text-2xl sm:text-3xl md:text-4xl lg:text-5xl font-bold">
+            Welcome to My Dashboard
+          </h1>
+          <p className="text-sm sm:text-base md:text-lg lg:text-xl mt-2">
+            Your go-to place for managing your data and settings
+          </p>
+        </div>
+      </header>
+    </div>
   );
 };
 

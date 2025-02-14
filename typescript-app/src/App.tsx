@@ -1,17 +1,23 @@
-import { Sidebar } from "./components/Sidebar/app-sidebar";
-import "./App.css";
-import { ThemeProvider } from "./components/theme/theme-provider";
 import Dashboard from "./pages/Dashboard/Dashboard";
+import Header from "./components/Header/Header";
+import Sidebar from "./components/Sidebar/Sidebar"; // Assuming Sidebar is in the components folder
 
-function App() {
+const App = () => {
   return (
-    <>
-      <ThemeProvider defaultTheme="light" storageKey="vite-ui-theme">
-        <Sidebar />
+    <div className="flex h-screen">
+      {/* Sidebar */}
+      <Sidebar />
+
+      {/* Main Content Area */}
+      <main className="flex-1 flex flex-col">
+        {/* Header Section */}
+        <Header />
+
+        {/* Dashboard Component */}
         <Dashboard />
-      </ThemeProvider>
-    </>
+      </main>
+    </div>
   );
-}
+};
 
 export default App;
