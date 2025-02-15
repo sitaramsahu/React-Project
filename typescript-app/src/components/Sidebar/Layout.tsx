@@ -79,7 +79,7 @@ const Layout: React.FC<LayoutProps> = ({ children }) => {
             <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 h-16 flex items-center justify-between">
               <div className="flex items-center">
                 <SidebarTrigger className="mr-4 " />
-                <h1 className="text-lg font-semibold text-gray-900">
+                <h1 className="text-gray-600 text-base sm:text-2xl font-semibold">
                   Dashboard
                 </h1>
               </div>
