@@ -1,20 +1,15 @@
-import Dashboard from "./pages/Dashboard/Dashboard";
-// import Header from "./components/Header/Header";
-import Layout from "./components/Sidebar/Layout";
+import "./App.css";
+import AppRoutes from "./components/Routes/AppRoutes";
+import { ThemeProvider } from "./components/theme/theme-provider";
 
-const App = () => {
+function App() {
   return (
     <>
-      {/* <Header /> */}
-      <div className="w-full ">
-        <Layout>
-          <div className="bg-white shadow-sm rounded-lg p-5 w-full">
-            <Dashboard />
-          </div>
-        </Layout>
-      </div>
+      <ThemeProvider defaultTheme="light" storageKey="vite-ui-theme">
+        <AppRoutes />
+      </ThemeProvider>
     </>
   );
-};
+}
 
 export default App;
