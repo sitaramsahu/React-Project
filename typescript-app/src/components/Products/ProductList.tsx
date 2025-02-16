@@ -13,12 +13,12 @@ const ProductList: React.FC<ProductCardProps> = ({ index }) => (
     </CardHeader>
     <CardContent>
       <img
-        src="https://via.placeholder.com/300"
+        src="https://asrsnews.in/wp-content/uploads/2025/02/2._SS420.png"
         alt="Product"
         className="w-full h-48 object-cover"
       />
       <p className="text-gray-600">This is a description of the product.</p>
-      <Button className="mt-4 bg-blue-500 text-white hover:bg-blue-600">
+      <Button className="mt-4 bg-blue-500 text-white hover:bg-orange-400">
         Buy Now
       </Button>
     </CardContent>

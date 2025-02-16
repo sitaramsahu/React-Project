@@ -50,6 +50,11 @@ const Dashboard: React.FC = () => {
       price: 25999.99,
       image: "https://asrsnews.in/wp-content/uploads/2025/02/icon_linkedin.png",
     },
+    {
+      title: "Book",
+      price: 499.99,
+      image: "https://asrsnews.in/wp-content/uploads/2025/02/2._SS420.png",
+    },
   ];
 
   return (
@@ -80,17 +85,15 @@ const Dashboard: React.FC = () => {
             <ProductList key={index} index={index} />
           ))}
         </section>
-        <section className="p-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-6">
-          <div className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-2">
-            {products.map((product, index) => (
-              <ProductCard
-                key={index}
-                title={product.title}
-                price={product.price}
-                image={product.image}
-              />
-            ))}
-          </div>
+        <section className="p-10 grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 xl:grid-cols-4 gap-6">
+          {products.map((product, index) => (
+            <ProductCard
+              key={index}
+              title={product.title}
+              price={product.price}
+              image={product.image}
+            />
+          ))}
         </section>
       </div>
     </div>
