@@ -55,6 +55,21 @@ const Dashboard: React.FC = () => {
       price: 499.99,
       image: "https://asrsnews.in/wp-content/uploads/2025/02/2._SS420.png",
     },
+    {
+      title: "Book",
+      price: 499.99,
+      image: "https://asrsnews.in/wp-content/uploads/2025/02/1._SS420.png",
+    },
+    {
+      title: "Book",
+      price: 499.99,
+      image: "https://asrsnews.in/wp-content/uploads/2025/02/4._SS420.png",
+    },
+    {
+      title: "Book",
+      price: 499.99,
+      image: "https://asrsnews.in/wp-content/uploads/2025/02/6._SS420.png",
+    },
   ];
 
   return (
