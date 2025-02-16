@@ -5,7 +5,7 @@ import Header from "@/components/Header/Header";
 import ProductList from "@/components/Products/ProductList";
 import ProductCard from "@/components/Products/ProductCard";
 
-const App: React.FC = () => {
+const Dashboard: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
   const [sidebarOpen, setSidebarOpen] = useState<boolean>(true);
 
@@ -97,4 +97,4 @@ const App: React.FC = () => {
   );
 };
 
-export default App;
+export default Dashboard;
