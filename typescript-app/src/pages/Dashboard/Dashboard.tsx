@@ -7,7 +7,7 @@ import ProductCard from "@/components/Products/ProductCard";
 
 const Dashboard: React.FC = () => {
   const [menuOpen, setMenuOpen] = useState<boolean>(false);
-  const [sidebarOpen, setSidebarOpen] = useState<boolean>(true);
+  const [sidebarOpen, setSidebarOpen] = useState<boolean>(false);
 
   const products = [
     {
