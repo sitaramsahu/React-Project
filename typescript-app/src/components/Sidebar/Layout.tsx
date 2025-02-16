@@ -1,4 +1,15 @@
 import React from "react";
+import {
+  Drawer,
+  DrawerClose,
+  DrawerContent,
+  DrawerDescription,
+  DrawerFooter,
+  DrawerHeader,
+  DrawerTitle,
+  DrawerTrigger,
+} from "@/components/ui/drawer";
+import { Button } from "../ui/button";
 
 type SidebarProps = {
   sidebarOpen: boolean;
@@ -23,6 +34,30 @@ const Layout: React.FC<SidebarProps> = ({ sidebarOpen }) => (
             Profile
           </a>
         </li>
+        <li>
+          <Drawer>
+            <DrawerTrigger asChild>
+              <a href="#" className="block p-2 hover:text-blue-500">
+                working
+              </a>
+            </DrawerTrigger>
+            <DrawerContent>
+              <DrawerHeader>
+                <DrawerTitle>Are you absolutely sure?</DrawerTitle>
+                <DrawerDescription>
+                  This action cannot be undone.
+                </DrawerDescription>
+              </DrawerHeader>
+              <DrawerFooter>
+                <Button>Submit</Button>
+                <DrawerClose>
+                  <Button variant="outline">Cancel</Button>
+                </DrawerClose>
+              </DrawerFooter>
+            </DrawerContent>
+          </Drawer>
+        </li>
+
         <li>
           <a href="#" className="block p-2 hover:text-blue-500">
             Settings
