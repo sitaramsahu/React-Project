@@ -6,10 +6,8 @@ import {
   ReactNode,
 } from "react";
 
-// Define the possible theme types
 type Theme = "light" | "dark" | "system";
 
-// Define the types for the props of the ThemeProvider component
 interface ThemeProviderProps {
   children: ReactNode;
   defaultTheme?: Theme;
