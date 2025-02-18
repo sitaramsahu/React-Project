@@ -73,7 +73,7 @@ const Dashboard: React.FC = () => {
   ];
 
   return (
-    <div className="min-h-screen bg-gray-100 flex">
+    <div className="flex">
       <Layout sidebarOpen={sidebarOpen} setSidebarOpen={setSidebarOpen} />
       <div
         className={`flex-1 transition-all duration-300 ${

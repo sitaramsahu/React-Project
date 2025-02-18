@@ -1,6 +1,8 @@
 import React from "react";
-import { Menu, X } from "lucide-react";
+import { Menu, X, Sun, Moon } from "lucide-react";
 import { Button } from "@/components/ui/button";
+import { useTheme } from "@/components/theme/theme-provider";
+import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
 
 type NavbarProps = {
   menuOpen: boolean;
@@ -14,45 +16,95 @@ const Header: React.FC<NavbarProps> = ({
   setMenuOpen,
   sidebarOpen,
   setSidebarOpen,
-}) => (
-  <nav className="bg-transparent shadow-md p-4 flex justify-between items-center">
-    <Button
-      onClick={() => setSidebarOpen(!sidebarOpen)}
-      className="text-gray-900 bg-transparent hover:bg-green-300"
+}) => {
+  const { theme, setTheme } = useTheme();
+
+  return (
+    <header
+      className={`w-full ${
+        theme === "dark" ? "bg-gray-900 text-white" : "bg-white text-gray-900"
+      } shadow-md`}
     >
-      {sidebarOpen ? <X size={24} /> : <Menu size={44} />}
-    </Button>
-    <h1 className="text-xl font-bold">My Vite React App</h1>
-    <Button className="md:hidden" onClick={() => setMenuOpen(!menuOpen)}>
-      {menuOpen ? <X size={24} /> : <Menu size={24} />}
-    </Button>
-    <ul
-      className={`md:flex md:space-x-6 absolute md:static top-16 left-0 w-full bg-white md:w-auto md:bg-transparent p-4 md:p-0 shadow-md md:shadow-none transition-all duration-300 ${
-        menuOpen ? "block" : "hidden"
-      }`}
-    >
-      <li>
-        <a href="#" className="block p-2 hover:text-blue-500">
-          Home
-        </a>
-      </li>
-      <li>
-        <a href="#" className="block p-2 hover:text-blue-500">
-          About
-        </a>
-      </li>
-      <li>
-        <a href="#" className="block p-2 hover:text-blue-500">
-          Services
-        </a>
-      </li>
-      <li>
-        <a href="#" className="block p-2 hover:text-blue-500">
-          Contact
-        </a>
-      </li>
-    </ul>
-  </nav>
-);
+      {/* Top Section */}
+      <div className="flex justify-between items-center p-3 border-b border-gray-300">
+        {/* Social Media Icons */}
+        <div className="flex space-x-4">
+          <a href="#" className="hover:text-blue-500">
+            <FaFacebook size={20} />
+          </a>
+          <a href="#" className="hover:text-blue-500">
+            <FaTwitter size={20} />
+          </a>
+          <a href="#" className="hover:text-pink-500">
+            <FaInstagram size={20} />
+          </a>
+          <a href="#" className="hover:text-blue-700">
+            <FaLinkedin size={20} />
+          </a>
+        </div>
+
+        {/* Theme Toggle */}
+        <Button
+          variant="outline"
+          size="icon"
+          onClick={() => setTheme(theme === "light" ? "dark" : "light")}
+          className="relative"
+        >
+          <Sun
+            className={`h-[1.2rem] w-[1.2rem] transition-all ${
+              theme === "dark" ? "-rotate-90 scale-0" : "rotate-0 scale-100"
+            }`}
+          />
+          <Moon
+            className={`absolute h-[1.2rem] w-[1.2rem] transition-all ${
+              theme === "dark" ? "rotate-0 scale-100" : "rotate-90 scale-0"
+            }`}
+          />
+          <span className="sr-only">Toggle theme</span>
+        </Button>
+      </div>
+
+      {/* Navigation Bar */}
+      <nav className=" flex justify-between items-center">
+        <Button
+          onClick={() => setSidebarOpen(!sidebarOpen)}
+          className="text-red-900 bg-transparent hover:bg-green-300"
+        >
+          {sidebarOpen ? <X size={24} /> : <Menu size={44} />}
+        </Button>
+        <h1 className="text-xl font-bold">My Vite React App</h1>
+        <Button className="md:hidden" onClick={() => setMenuOpen(!menuOpen)}>
+          {menuOpen ? <X size={24} /> : <Menu size={24} />}
+        </Button>
+        <ul
+          className={`md:flex md:space-x-6 absolute md:static top-16 left-0 w-full bg-white dark:bg-gray-900 md:w-auto md:bg-transparent p-4 md:p-0 shadow-md md:shadow-none transition-all duration-300 ${
+            menuOpen ? "block" : "hidden"
+          }`}
+        >
+          <li>
+            <a href="#" className="block p-2 hover:text-blue-500">
+              Home
+            </a>
+          </li>
+          <li>
+            <a href="#" className="block p-2 hover:text-blue-500">
+              About
+            </a>
+          </li>
+          <li>
+            <a href="#" className="block p-2 hover:text-blue-500">
+              Services
+            </a>
+          </li>
+          <li>
+            <a href="#" className="block p-2 hover:text-blue-500">
+              Contact
+            </a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+  );
+};
 
 export default Header;

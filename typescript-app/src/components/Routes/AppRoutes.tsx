@@ -1,4 +1,5 @@
 import Dashboard from "@/pages/Dashboard/Dashboard";
+import NotFound from "@/pages/NotFound/NotFound";
 import React from "react";
 import { BrowserRouter as Router, Routes, Route } from "react-router-dom";
 
@@ -11,7 +12,7 @@ const AppRoutes: React.FC = () => {
         {/* <Route path="/about" element={<About />} /> */}
         {/* <Route path="/services" element={<Services />} /> */}
         {/* <Route path="/contact" element={<Contact />} /> */}
-        {/* <Route path="*" element={<NotFound />} /> */}
+        <Route path="*" element={<NotFound />} />
       </Routes>
     </Router>
   );

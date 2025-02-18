@@ -18,14 +18,15 @@ type SidebarProps = {
 
 const Layout: React.FC<SidebarProps> = ({ sidebarOpen }) => (
   <aside
-    className={`bg-white shadow-md w-64 p-4 fixed h-full transition-transform duration-300 ease-in-out ${
-      sidebarOpen ? "translate-x-0" : "-translate-x-64"
-    }`}
+    className={`absolute top-12 left-0 w-64 h-full p-4 transition-transform duration-300 ease-in-out 
+      ${sidebarOpen ? "translate-x-0" : "-translate-x-full"}
+      bg-transparent backdrop-blur-md`}
+    // style={{ background: "none" }}
   >
     {sidebarOpen && (
-      <ul>
+      <ul className="bg-white/10 p-4 rounded-lg backdrop-blur-md">
         <li>
-          <a href="#" className="block p-2 pt-12 hover:text-blue-500">
+          <a href="#" className="block p-2 hover:text-blue-500">
             Dashboard
           </a>
         </li>
@@ -38,7 +39,7 @@ const Layout: React.FC<SidebarProps> = ({ sidebarOpen }) => (
           <Drawer>
             <DrawerTrigger asChild>
               <a href="#" className="block p-2 hover:text-blue-500">
-                working
+                Working
               </a>
             </DrawerTrigger>
             <DrawerContent>
