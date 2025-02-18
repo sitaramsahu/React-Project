@@ -97,7 +97,7 @@ const Header: React.FC<NavbarProps> = ({
             </a>
           </li>
           <li>
-            <a href="#" className="block p-2 hover:text-blue-500">
+            <a href="/login" className="block p-2 hover:text-blue-500">
               Contact
             </a>
           </li>
