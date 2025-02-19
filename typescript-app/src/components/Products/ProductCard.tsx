@@ -6,6 +6,7 @@ import {
   FaShoppingCart,
 } from "react-icons/fa";
 import { Button } from "../ui/button";
+import { Card, CardContent, CardTitle } from "@/components/ui/card";
 
 interface ProductCardProps {
   title: string;
@@ -13,6 +14,7 @@ interface ProductCardProps {
   image: string;
   rating?: number;
 }
+
 const ProductCard: React.FC<ProductCardProps> = ({
   title,
   price,
@@ -21,10 +23,13 @@ const ProductCard: React.FC<ProductCardProps> = ({
 }) => {
   const renderStars = () => {
     const stars = [];
+    const fullStars = Math.floor(rating);
+    const halfStar = rating % 1 !== 0;
+
     for (let i = 1; i <= 5; i++) {
-      if (i <= rating) {
+      if (i <= fullStars) {
         stars.push(<FaStar key={i} className="text-yellow-600" />);
-      } else if (i - 0.5 === rating) {
+      } else if (halfStar && i === fullStars + 1) {
         stars.push(<FaStarHalfAlt key={i} className="text-yellow-500" />);
       } else {
         stars.push(<FaRegStar key={i} className="text-gray-400" />);
@@ -32,27 +37,25 @@ const ProductCard: React.FC<ProductCardProps> = ({
     }
     return stars;
   };
+
   return (
-    <div className="bg-white rounded-xl shadow-md overflow-hidden w-60  border border-gray-200 mt-4">
-      {/* Product Image */}
-      <img src={image} alt={title} className="w-full h-44 object-cover" />
-
-      {/* Product Details */}
-      <div className="p-4">
-        <h3 className="text-lg font-semibold text-gray-800">{title}</h3>
-        <p className="text-gray-800">This is a description of the item.</p>
-        {/* ⭐ Star Rating */}
-        <div className="flex items-center mt-1">{renderStars()}</div>
-        {/* Price */}
-        <p className="text-gray-700 font-bold text-lg mt-2">
-          ₹{price.toFixed(2)}
+    <Card>
+      <img src={image} alt={title} className="w-full h-48 object-cover" />
+      <CardContent className="p-4">
+        {/* <h3 className="text-lg font-semibold text-gray-800">{title}</h3> */}
+        <CardTitle>{title}</CardTitle>
+        <p className="text-gray-600 text-sm mt-1">
+          This is a description of the item.
         </p>
-
-        <Button className="mt-4   bg-black text-white  hover:bg-green-300 hover:text-black hover:border-green-500 ">
+        <CardTitle className="flex justify-center items-center mt-2">
+          {renderStars()}
+        </CardTitle>
+        <CardTitle>₹{price.toFixed(2)}</CardTitle>
+        <Button className="mt-4 w-full flex items-center justify-center gap-2 bg-black text-white hover:bg-green-300 hover:text-black hover:border-green-500 transition-all">
           <FaShoppingCart className="text-lg" /> Add to Cart
         </Button>
-      </div>
-    </div>
+      </CardContent>
+    </Card>
   );
 };
 

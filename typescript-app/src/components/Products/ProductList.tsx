@@ -1,5 +1,11 @@
 import React from "react";
-import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import {
+  Card,
+  CardContent,
+  CardDescription,
+  CardHeader,
+  CardTitle,
+} from "@/components/ui/card";
 import { Button } from "@/components/ui/button";
 
 type ProductCardProps = {
@@ -17,7 +23,7 @@ const ProductList: React.FC<ProductCardProps> = ({ index }) => (
         alt="Product"
         className="w-full h-44 md:object-fill md:h-64   object-cover"
       />
-      <p className="text-gray-600">This is a description of the product.</p>
+      <CardDescription>This is a description of the product.</CardDescription>
       <Button className="mt-4 bg-blue-500 text-white hover:bg-orange-400">
         Buy Now
       </Button>

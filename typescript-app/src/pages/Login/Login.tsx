@@ -28,19 +28,20 @@ const Login: React.FC = () => {
   return (
     <div
       className="min-h-screen bg-cover bg-center bg-no-repeat"
-      style={{ backgroundImage: "url('https://your-image-url.com')" }}
+      style={{
+        backgroundImage:
+          "url('https://asrsnews.in/wp-content/uploads/2025/02/icon_yt.png')",
+      }}
     >
-      <div className="flex items-center justify-center min-h-screen bg-black bg-opacity-50">
-        <Card className="w-full max-w-md shadow-lg bg-white">
+      <div className="flex items-center justify-center min-h-screen bg-transparent bg-opacity-50">
+        <Card className="w-full max-w-md shadow-lg border-l-gray-600">
           <CardHeader>
-            <CardTitle className="text-center text-2xl font-bold">
-              Login
-            </CardTitle>
+            <CardTitle className=" text-2xl font-bold">Login</CardTitle>
           </CardHeader>
           <CardContent>
             <form onSubmit={handleSubmit(onSubmit)} className="space-y-4">
               <div>
-                <label className="text-sm font-medium">Email</label>
+                <label className="text-sm text-left font-medium">Email</label>
                 <Input
                   type="email"
                   {...register("email", { required: true })}
