@@ -7,16 +7,9 @@ import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
 type NavbarProps = {
   menuOpen: boolean;
   setMenuOpen: (open: boolean) => void;
-  sidebarOpen: boolean;
-  setSidebarOpen: (open: boolean) => void;
 };
 
-const Header: React.FC<NavbarProps> = ({
-  menuOpen,
-  setMenuOpen,
-  sidebarOpen,
-  setSidebarOpen,
-}) => {
+const Header: React.FC<NavbarProps> = ({ menuOpen, setMenuOpen }) => {
   const { theme, setTheme } = useTheme();
 
   return (
@@ -25,9 +18,7 @@ const Header: React.FC<NavbarProps> = ({
         theme === "dark" ? "bg-gray-900 text-white" : "bg-white text-gray-900"
       } shadow-md`}
     >
-      {/* Top Section */}
       <div className="flex justify-between items-center p-3 border-b border-gray-300">
-        {/* Social Media Icons */}
         <div className="flex space-x-4">
           <a href="#" className="hover:text-blue-500">
             <FaFacebook size={20} />
@@ -43,7 +34,6 @@ const Header: React.FC<NavbarProps> = ({
           </a>
         </div>
 
-        {/* Theme Toggle */}
         <Button
           variant="outline"
           size="icon"
@@ -65,19 +55,16 @@ const Header: React.FC<NavbarProps> = ({
       </div>
 
       {/* Navigation Bar */}
-      <nav className=" flex justify-between items-center">
-        <Button
-          onClick={() => setSidebarOpen(!sidebarOpen)}
-          className="text-red-900 bg-transparent hover:bg-green-300"
-        >
-          {sidebarOpen ? <X size={24} /> : <Menu size={44} />}
-        </Button>
+      <nav className="flex justify-between items-center">
         <h1 className="text-xl font-bold">My Vite React App</h1>
-        <Button className="md:hidden" onClick={() => setMenuOpen(!menuOpen)}>
-          {menuOpen ? <X size={24} /> : <Menu size={24} />}
+        <Button
+          className="md:hidden bg-transparent text-blue-600 hover:bg-gray-50"
+          onClick={() => setMenuOpen(!menuOpen)}
+        >
+          {menuOpen ? <X size={34} /> : <Menu size={24} />}
         </Button>
         <ul
-          className={`md:flex md:space-x-6 absolute md:static top-16 left-0 w-full bg-white dark:bg-gray-900 md:w-auto md:bg-transparent p-4 md:p-0 shadow-md md:shadow-none transition-all duration-300 ${
+          className={`md:flex md:space-x-6 absolute md:static top-32 left-0 w-full bg-white dark:bg-gray-900 md:w-auto md:bg-transparent p-4 md:p-0 shadow-md md:shadow-none transition-all duration-300 ${
             menuOpen ? "block" : "hidden"
           }`}
         >
