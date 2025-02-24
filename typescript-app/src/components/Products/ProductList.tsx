@@ -19,7 +19,7 @@ const ProductList: React.FC<ProductCardProps> = ({ index }) => (
     </CardHeader>
     <CardContent>
       <img
-        src="https://asrsnews.in/wp-content/uploads/2025/02/2._SS420.png"
+        src="https://asrsnews.in/wp-content/uploads/2025/02/3._SS420.png"
         alt="Product"
         className="w-full h-44 md:object-fill md:h-64   object-cover"
       />
