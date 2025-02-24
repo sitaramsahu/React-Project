@@ -3,6 +3,7 @@ import { Menu, X, Sun, Moon } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import { useTheme } from "@/components/theme/theme-provider";
 import { FaFacebook, FaTwitter, FaInstagram, FaLinkedin } from "react-icons/fa";
+import { Link } from "react-router-dom";
 
 type NavbarProps = {
   menuOpen: boolean;
@@ -69,29 +70,29 @@ const Header: React.FC<NavbarProps> = ({ menuOpen, setMenuOpen }) => {
           }`}
         >
           <li>
-            <a href="#" className="block p-2 hover:text-blue-500">
+            <Link to="/" className="block p-2 hover:text-blue-500">
               Home
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="#" className="block p-2 hover:text-blue-500">
+            <Link to="#" className="block p-2 hover:text-blue-500">
               About
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="/Services" className="block p-2 hover:text-blue-500">
+            <Link to="/Services" className="block p-2 hover:text-blue-500">
               Services
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="/login" className="block p-2 hover:text-blue-500">
+            <Link to="/login" className="block p-2 hover:text-blue-500">
               Contact
-            </a>
+            </Link>
           </li>
           <li>
-            <a href="/settings" className="block p-2 hover:text-blue-500">
+            <Link to="/settings" className="block p-2 hover:text-blue-500">
               Setting
-            </a>
+            </Link>
           </li>
         </ul>
       </nav>

@@ -78,19 +78,24 @@ const SettingsContext = createContext<SettingsContextType | undefined>(
 
 export function SettingsProvider({ children }: { children: React.ReactNode }) {
   const [settings, setSettings] = useState<UserSettings>(() => {
-    // Try to load settings from localStorage during initialization
     if (typeof window !== "undefined") {
-      const savedSettings = localStorage.getItem("userSettings");
-      if (savedSettings) {
-        return JSON.parse(savedSettings);
+      try {
+        const savedSettings = localStorage.getItem("userSettings");
+        return savedSettings ? JSON.parse(savedSettings) : defaultSettings;
+      } catch (error) {
+        console.error("Error loading settings from localStorage:", error);
+        return defaultSettings;
       }
     }
     return defaultSettings;
   });
 
-  // Save settings to localStorage whenever they change
   useEffect(() => {
-    localStorage.setItem("userSettings", JSON.stringify(settings));
+    try {
+      localStorage.setItem("userSettings", JSON.stringify(settings));
+    } catch (error) {
+      console.error("Error saving settings to localStorage:", error);
+    }
   }, [settings]);
 
   const updateSettings = (newSettings: Partial<UserSettings>) => {
@@ -131,7 +136,10 @@ export function SettingsProvider({ children }: { children: React.ReactNode }) {
 
 export function useSettings() {
   const context = useContext(SettingsContext);
-  if (context === undefined) {
+  if (!context) {
+    if (process.env.NODE_ENV === "development") {
+      console.warn("useSettings() is being used outside of SettingsProvider.");
+    }
     throw new Error("useSettings must be used within a SettingsProvider");
   }
   return context;

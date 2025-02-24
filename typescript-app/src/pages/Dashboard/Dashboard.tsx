@@ -1,16 +1,11 @@
-import React, { useState } from "react";
 import { Button } from "@/components/ui/button";
-import Header from "@/components/Header/Header";
 import ProductList from "@/components/Products/ProductList";
 import ProductCard from "@/components/Products/ProductCard";
 import { products } from "@/components/AllProductsList/CardProduct";
 
 const Dashboard: React.FC = () => {
-  const [menuOpen, setMenuOpen] = useState<boolean>(false);
-
   return (
     <div>
-      <Header menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
       <header className="flex flex-col items-center justify-center text-center p-10 bg-gradient-to-r from-blue-500 to-indigo-600 text-white min-h-[60vh]">
         <h2 className="text-4xl font-bold mb-4">Welcome to Our Website</h2>
         <p className="text-lg max-w-xl">
