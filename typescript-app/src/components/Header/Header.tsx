@@ -79,7 +79,7 @@ const Header: React.FC<NavbarProps> = ({ menuOpen, setMenuOpen }) => {
             </a>
           </li>
           <li>
-            <a href="#" className="block p-2 hover:text-blue-500">
+            <a href="/Services" className="block p-2 hover:text-blue-500">
               Services
             </a>
           </li>
