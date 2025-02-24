@@ -6,7 +6,7 @@ import { products } from "@/components/AllProductsList/CardProduct";
 const Dashboard: React.FC = () => {
   return (
     <div>
-      <header className="flex flex-col items-center justify-center text-center p-10 bg-gradient-to-r from-blue-500 to-indigo-600 text-white min-h-[60vh]">
+      <header className="flex flex-col items-center justify-center text-center  min-h-[60vh]">
         <h2 className="text-4xl font-bold mb-4">Welcome to Our Website</h2>
         <p className="text-lg max-w-xl">
           Building responsive and fast web applications using Vite and React.
