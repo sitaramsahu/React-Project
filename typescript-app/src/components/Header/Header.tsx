@@ -88,6 +88,11 @@ const Header: React.FC<NavbarProps> = ({ menuOpen, setMenuOpen }) => {
               Contact
             </a>
           </li>
+          <li>
+            <a href="/settings" className="block p-2 hover:text-blue-500">
+              Setting
+            </a>
+          </li>
         </ul>
       </nav>
     </header>
