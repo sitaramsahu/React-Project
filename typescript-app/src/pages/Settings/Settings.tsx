@@ -26,6 +26,15 @@ import { Laptop, Smartphone, Tablet } from "lucide-react";
 import { useState } from "react";
 import { toast } from "sonner";
 import { useSettings } from "@/context/settings-context";
+import {
+  Dialog,
+  DialogContent,
+  DialogHeader,
+  DialogTitle,
+  DialogDescription,
+  DialogTrigger,
+} from "@/components/ui/dialog";
+import { useNavigate } from "react-router-dom";
 
 const defaultAvatars = [
   "https://hebbkx1anhila5yf.public.blob.vercel-storage.com/9439775.jpg-4JVJWOjPksd3DtnBYJXoWHA5lc1DU9.jpeg",
@@ -70,16 +79,25 @@ export default function Settings() {
     toast.success("Privacy settings saved successfully");
   };
 
+  const [open, setOpen] = useState(false);
+  const navigate = useNavigate();
+
+  const handleLogout = () => {
+    setOpen(false);
+    navigate("/");
+  };
+
   return (
     <div className="container mx-auto py-10">
       <h1 className="text-3xl font-bold mb-6">Settings</h1>
       <Tabs defaultValue="account" className="space-y-4">
-        <TabsList className="grid w-full grid-cols-5">
+        <TabsList className="grid w-full grid-cols-6">
           <TabsTrigger value="account">Account</TabsTrigger>
           <TabsTrigger value="security">Security</TabsTrigger>
           <TabsTrigger value="preferences">Preferences</TabsTrigger>
           <TabsTrigger value="notifications">Notifications</TabsTrigger>
           <TabsTrigger value="privacy">Privacy</TabsTrigger>
+          <TabsTrigger value="logout">Logout</TabsTrigger>
         </TabsList>
 
         <TabsContent value="account">
@@ -749,6 +767,35 @@ export default function Settings() {
               <Button onClick={handleSavePrivacy}>Save Privacy Settings</Button>
             </CardFooter>
           </Card>
+        </TabsContent>
+
+        <TabsContent
+          value="logout"
+          className="flex justify-center items-center"
+        >
+          <Dialog open={open} onOpenChange={setOpen}>
+            <DialogTrigger asChild>
+              <Button variant="destructive" onClick={() => setOpen(true)}>
+                Logout
+              </Button>
+            </DialogTrigger>
+            <DialogContent className="max-w-sm">
+              <DialogHeader>
+                <DialogTitle>Logout</DialogTitle>
+                <DialogDescription>
+                  Are you sure you want to logout?
+                </DialogDescription>
+              </DialogHeader>
+              <div className="flex justify-end gap-2 mt-4">
+                <Button variant="outline" onClick={() => setOpen(false)}>
+                  Cancel
+                </Button>
+                <Button variant="destructive" onClick={handleLogout}>
+                  Logout
+                </Button>
+              </div>
+            </DialogContent>
+          </Dialog>
         </TabsContent>
       </Tabs>
     </div>
