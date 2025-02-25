@@ -15,7 +15,7 @@ const Header: React.FC<NavbarProps> = ({ menuOpen, setMenuOpen }) => {
 
   return (
     <header
-      className={`w-full ${
+      className={` fixed w-full ${
         theme === "dark" ? "bg-gray-900 text-white" : "bg-white text-gray-900"
       } shadow-md`}
     >
@@ -56,8 +56,8 @@ const Header: React.FC<NavbarProps> = ({ menuOpen, setMenuOpen }) => {
       </div>
 
       {/* Navigation Bar */}
-      <nav className="flex justify-between items-center">
-        <h1 className="text-xl font-bold">My Vite React App</h1>
+      <nav className="flex justify-between items-center p-4  top-0 left-0 w-full bg-white dark:bg-gray-900 shadow-md z-10">
+        <h1 className="text-xl font-bold">My App</h1>
         <Button
           className="md:hidden bg-transparent text-blue-600 hover:bg-gray-50"
           onClick={() => setMenuOpen(!menuOpen)}
@@ -75,7 +75,7 @@ const Header: React.FC<NavbarProps> = ({ menuOpen, setMenuOpen }) => {
             </Link>
           </li>
           <li>
-            <Link to="#" className="block p-2 hover:text-blue-500">
+            <Link to="/about" className="block p-2 hover:text-blue-500">
               About
             </Link>
           </li>

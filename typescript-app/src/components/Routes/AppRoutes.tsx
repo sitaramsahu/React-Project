@@ -14,7 +14,7 @@ const AppLayout: React.FC<React.PropsWithChildren<{}>> = ({ children }) => {
   return (
     <div>
       <Header menuOpen={menuOpen} setMenuOpen={setMenuOpen} />
-      <main className="mt-16">{children}</main>
+      <main className="pt-32">{children}</main>
     </div>
   );
 };
