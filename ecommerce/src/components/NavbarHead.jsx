@@ -146,7 +146,7 @@ const NavbarHead = () => {
           </div>
         </div>
       </div>
-      <div className={`${isOpen ? "block" : "hidden"} md:hidden`}>
+      <div className={`${isOpen ? "block" : "hidden"} md:hidden sm:hidden`}>
         <Link
           to="/"
           className="block py-2 px-4 text-sm hover:bg-blue-500 hover:text-white transition duration-300"
