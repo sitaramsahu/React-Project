@@ -20,14 +20,7 @@ function App() {
           <LiveBackground />
           <Routes>
             <Route path="/" element={<Home />} />
-            <Route
-              path="/dashboard"
-              element={
-                <div>
-                  <Dashboard />
-                </div>
-              }
-            />
+            <Route path="/dashboard" element={<Dashboard />} />
             <Route path="/services" element={<Services />} />
             <Route path="/contact" element={<Contact />} />
             <Route path="/about" element={<About />} />
