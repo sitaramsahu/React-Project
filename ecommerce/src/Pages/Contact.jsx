@@ -8,10 +8,10 @@ const Contact = () => {
     "https://asrsnews.in/wp-content/uploads/2025/02/4._SS420.png",
     "https://asrsnews.in/wp-content/uploads/2025/02/5._SS420.png",
     "https://asrsnews.in/wp-content/uploads/2025/02/6._SS420.png",
-    "https://asrsnews.in/wp-content/uploads/2025/02/7._SS420_QL85.png",
     "https://asrsnews.in/wp-content/uploads/2025/02/8._SS420.png",
     "https://asrsnews.in/wp-content/uploads/2025/02/9._SS420.png",
     "https://asrsnews.in/wp-content/uploads/2025/02/10._SS420.jpg",
+    "https://asrsnews.in/wp-content/uploads/2025/02/7._SS420_QL85.png",
   ];
 
   const [submitted, setSubmitted] = useState(false);
