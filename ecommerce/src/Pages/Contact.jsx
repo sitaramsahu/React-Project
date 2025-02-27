@@ -1,4 +1,5 @@
 import React, { useEffect, useState } from "react";
+import { Link } from "react-router-dom";
 const Contact = () => {
   const images = [
     "https://asrsnews.in/wp-content/uploads/2025/02/1._SS420.png",
@@ -94,11 +95,12 @@ const Contact = () => {
             Submit Form
           </button>
         </form>
+
         <button
           type="submit"
-          className="w-full bg-blue-600 text-white p-0 mt-6 ml-6 rounded-lg font-semibold hover:bg-blue-700 transition"
+          className="w-96 bg-blue-700 text-white p-2 ml-6 mt-6 mb-4 rounded-lg font-semibold hover:bg-blue-300 hover:text-black transition text-2xl"
         >
-          Submit Form
+          <Link to="/about"> About</Link>
         </button>
       </div>
       <div>
