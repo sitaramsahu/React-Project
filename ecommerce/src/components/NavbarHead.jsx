@@ -28,9 +28,9 @@ const NavbarHead = () => {
                   viewBox="0 0 24 24"
                   fill="none"
                   stroke="#2970ff"
-                  stroke-width="3"
-                  stroke-linecap="round"
-                  stroke-linejoin="round"
+                  strokeWidth="3"
+                  strokeLinecap="round"
+                  strokeLinejoin="round"
                   className="lucide lucide-circle-user"
                 >
                   <circle cx="12" cy="12" r="10" />
