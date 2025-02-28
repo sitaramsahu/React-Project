@@ -22,7 +22,7 @@ const About = () => {
           <p className="mt-4 text-gray-600 leading-relaxed">
             At
             <Link to="/">
-              <span className="text-blue-500 font-semibold">YourStore</span>
+              <span className="text-blue-500 font-semibold">My Store</span>
             </Link>
             , we believe in the magic of stationery. Our journey began with a
             simple idea—to provide high-quality, beautiful, and affordable
