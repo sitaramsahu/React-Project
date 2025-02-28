@@ -7,39 +7,29 @@ const TopNavbar = () => {
       <div>
         <ul className="flex space-x-8 justify-center p-3 bg-slate-200">
           <li>
-            {" "}
             <a href="#">
-              {" "}
-              <Instagram />{" "}
-            </a>{" "}
+              <Instagram />
+            </a>
           </li>
           <li>
-            {" "}
             <a href="#">
-              {" "}
-              <Facebook />{" "}
-            </a>{" "}
+              <Facebook />
+            </a>
           </li>
           <li>
-            {" "}
             <a href="#">
-              {" "}
-              <Twitter />{" "}
-            </a>{" "}
+              <Twitter />
+            </a>
           </li>
           <li>
-            {" "}
             <a href="#">
-              {" "}
-              <Linkedin />{" "}
-            </a>{" "}
+              <Linkedin />
+            </a>
           </li>
           <li>
-            {" "}
             <a href="#">
-              {" "}
-              <Youtube />{" "}
-            </a>{" "}
+              <Youtube />
+            </a>
           </li>
           <p className="font-semibold">
             India's Largest : Stationery I Art & Craft Store |{" "}
