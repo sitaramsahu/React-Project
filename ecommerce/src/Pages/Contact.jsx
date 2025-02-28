@@ -98,9 +98,14 @@ const Contact = () => {
 
         <button
           type="submit"
-          className="w-96 bg-blue-700 text-white p-2 ml-6 mt-6 mb-4 rounded-lg font-semibold hover:bg-blue-300 hover:text-black transition text-2xl"
+          className="w-96 bg-blue-700 text-white p-2 ml-6 mt-6 mb-4 rounded-lg font-semibold hover:bg-black hover:text-black transition text-2xl"
         >
-          <Link to="/about"> About</Link>
+          <Link to="/about">
+            <img
+              src="https://asrsnews.in/wp-content/uploads/2025/02/7._SS420_QL85.png"
+              alt="Contact-Us"
+            />
+          </Link>
         </button>
       </div>
       <div>
