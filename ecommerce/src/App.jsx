@@ -1,14 +1,15 @@
 import { BrowserRouter as Router, Route, Routes } from "react-router-dom";
-import Navbar from "./components/ui/Navbar";
-import NavbarHead from "./components/NavbarHead";
-import error from "./assets/error-page-asrsnews.jpg";
-import LiveBackground from "./components/LiveBackground";
-import Footer from "./components/ui/Footer";
-import Services from "./Pages/Services";
-import Home from "./Pages/Home";
-import Contact from "./Pages/Contact";
-import About from "./Pages/About";
-import Track from "./Pages/Track";
+import Navbar from "@/components/ui/Navbar";
+import NavbarHead from "@/components/NavbarHead";
+import error from "@/assets/error-page-asrsnews.jpg";
+import LiveBackground from "@/components/LiveBackground";
+import Footer from "@/components/ui/Footer";
+import Services from "@/Pages/Services";
+import Home from "@/Pages/Home";
+import Contact from "@/Pages/Contact";
+import About from "@/Pages/About";
+import Track from "@/Pages/Track";
+import { ChartAreaInteractive } from "@/components/ChartAreaInteractive";
 
 function App() {
   return (
@@ -28,6 +29,7 @@ function App() {
             <Route path="/signup" element={<Signup />} />
             <Route path="/tracking" element={<Track />} />
             {/* <Route path="/signup" element={<Signup />} /> */}
+            <Route path="/chartarea" element={<ChartAreaInteractive />} />
 
             <Route
               path="*"
