@@ -10,6 +10,8 @@ import Contact from "@/Pages/Contact";
 import About from "@/Pages/About";
 import Track from "@/Pages/Track";
 import { ChartAreaInteractive } from "@/components/ChartAreaInteractive";
+import { InteractiveChart } from "@/components/InteractiveChart";
+import { StatsCards } from "./components/StatsCards";
 
 function App() {
   return (
@@ -29,7 +31,12 @@ function App() {
             <Route path="/signup" element={<Signup />} />
             <Route path="/tracking" element={<Track />} />
             {/* <Route path="/signup" element={<Signup />} /> */}
-            <Route path="/chartarea" element={<ChartAreaInteractive />} />
+            <Route
+              path="/ChartAreaInteractive"
+              element={<ChartAreaInteractive />}
+            />
+            <Route path="/InteractiveChart" element={<InteractiveChart />} />
+            <Route path="/StatsCards" element={<StatsCards />} />
 
             <Route
               path="*"
