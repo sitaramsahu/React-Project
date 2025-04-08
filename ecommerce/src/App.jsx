@@ -11,7 +11,8 @@ import About from "@/Pages/About";
 import Track from "@/Pages/Track";
 import { ChartAreaInteractive } from "@/components/ChartAreaInteractive";
 import { InteractiveChart } from "@/components/InteractiveChart";
-import { StatsCards } from "./components/StatsCards";
+import { StatsCards } from "@/components/StatsCards";
+import Dashboard from "@/Pages/Dashboard";
 
 function App() {
   return (
@@ -54,8 +55,5 @@ function App() {
 
 const Login = () => <h1 className="text-9xl font-bold">Login Page</h1>;
 const Signup = () => <h1 className="text-9xl font-bold">Signup Page</h1>;
-const Dashboard = () => (
-  <h1 className="text-6xl font-bold text-center"> Dashboard Page</h1>
-);
 
 export default App;
